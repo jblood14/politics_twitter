@@ -24,34 +24,35 @@ class Listener(StreamListener):
         print(status.text, file=self.output_file)
     def on_error(self, status_code):
         print(status_code)
-        return True # don't kill the stream
+        return False # don't kill the stream
 
 # output file
 output = open('stream_output.txt','w')
 
 # list of users
-users = ['@YouGov',
-        '@TSEofPB',
-        '@SaCoatesSky',
-        '@paulwaugh',
-        '@PARLYapp',
-        '@suttonnick',
-        '@MattSingh_',
-        '@MattChorley',
-        '@bbclaurak',
-        '@Ladpolitics',
-        '@Kevin_Maguire',
-        '@JolyonMaugham',
-        '@jimwaterson',
-        '@IsabelOakeshott',
-        '@IanDunt',
-        '@MrHarryCole',
-        '@GuidoFawkes',
-        '@georgeeaton',
-        '@faisalislam',
-        '@breeallegretti',
-        '@afneil',
-        '@alexwickham']
+users = ['14810076',# @YouGov
+        '1117418828', # @TSEofPB
+        # '@SaCoatesSky', this one not working
+        '26985345',# @paulwaugh
+        '2861345003',# @PARLYapp
+        '21910500', # @suttonnick
+        '37072353', # @MattSingh_
+        '66673916', # @MattChorley
+        '61183568', # @bbclaurak
+        '40015623', # @Ladpolitics
+        '60886384', # @Kevin_Maguire
+        '406842374', # @JolyonMaugham
+        '25275453', # @jimwaterson
+        '437814330', # @IsabelOakeshott
+        '21202851', # @IanDunt
+        '15348883', # @MrHarryCole
+        '465973', # @GuidoFawkes
+        '20668369', # @georgeeaton
+        '22812734', # @faisalislam
+        '92127426', # @breeallegretti
+        '136004952', # @afneil
+        '405769757', #@alexwickham
+        ]
 
 
 # create the listener instance
